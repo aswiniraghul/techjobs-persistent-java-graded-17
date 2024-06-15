@@ -9,8 +9,10 @@ import java.util.List;
 public class Job extends AbstractEntity {
 
     @ManyToOne
+    @JoinColumn(name = "employer_id")
     private Employer employer;
     @ManyToMany
+    @JoinColumn(name = "skills")
     private List<Skill> skills;
 
 
